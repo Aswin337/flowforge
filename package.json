@@ -1,0 +1,16 @@
+{
+  "name": "flowforge",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev":          "cd frontend && npm run dev",
+    "backend":      "cd backend && node server.js",
+    "backend:dev":  "cd backend && nodemon server.js",
+    "install:all":  "cd backend && npm install && cd ../frontend && npm install",
+    "full":         "concurrently --names \"API,UI\" --prefix-colors \"cyan,magenta\" \"npm run backend:dev\" \"npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
